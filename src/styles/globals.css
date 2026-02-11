@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+:root {
+  /* Spacing System - 8px base */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 2.5rem; /* 40px */
+  --spacing-3xl: 3rem; /* 48px */
+
+  /* Colors - Light Theme */
+  --color-primary: 99 102 241; /* Indigo-500 */
+  --color-primary-dark: 79 70 229; /* Indigo-600 */
+  --color-primary-light: 129 140 248; /* Indigo-400 */
+  
+  --color-accent: 34 197 94; /* Green-500 */
+  --color-accent-dark: 22 163 74; /* Green-600 */
+  --color-accent-light: 74 222 128; /* Green-400 */
+  
+  --color-background: 255 255 255;
+  --color-surface: 249 250 251; /* Gray-50 */
+  --color-surface-elevated: 255 255 255;
+  
+  --color-text-primary: 17 24 39; /* Gray-900 */
+  --color-text-secondary: 107 114 128; /* Gray-500 */
+  --color-text-tertiary: 156 163 175; /* Gray-400 */
+  
+  --color-border: 229 231 235; /* Gray-200 */
+  --color-border-focus: 99 102 241; /* Indigo-500 */
+  
+  --color-error: 239 68 68; /* Red-500 */
+  --color-warning: 251 146 60; /* Orange-400 */
+  --color-success: 34 197 94; /* Green-500 */
+  
+  --color-gray-50: 249 250 251;
+  --color-gray-100: 243 244 246;
+  --color-gray-200: 229 231 235;
+  --color-gray-300: 209 213 219;
+  --color-gray-400: 156 163 175;
+  --color-gray-500: 107 114 128;
+  --color-gray-600: 75 85 99;
+  --color-gray-700: 55 65 81;
+  --color-gray-800: 31 41 55;
+  --color-gray-900: 17 24 39;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* Border Radius */
+  --radius-sm: 0.5rem; /* 8px */
+  --radius-md: 0.75rem; /* 12px */
+  --radius-lg: 1rem; /* 16px */
+  --radius-xl: 1.5rem; /* 24px */
+  --radius-full: 9999px;
+}
+
+.dark {
+  /* Colors - Dark Theme */
+  --color-primary: 129 140 248; /* Indigo-400 */
+  --color-primary-dark: 99 102 241; /* Indigo-500 */
+  --color-primary-light: 165 180 252; /* Indigo-300 */
+  
+  --color-accent: 74 222 128; /* Green-400 */
+  --color-accent-dark: 34 197 94; /* Green-500 */
+  --color-accent-light: 134 239 172; /* Green-300 */
+  
+  --color-background: 17 24 39; /* Gray-900 */
+  --color-surface: 31 41 55; /* Gray-800 */
+  --color-surface-elevated: 55 65 81; /* Gray-700 */
+  
+  --color-text-primary: 249 250 251; /* Gray-50 */
+  --color-text-secondary: 156 163 175; /* Gray-400 */
+  --color-text-tertiary: 107 114 128; /* Gray-500 */
+  
+  --color-border: 55 65 81; /* Gray-700 */
+  --color-border-focus: 129 140 248; /* Indigo-400 */
+  
+  --color-error: 248 113 113; /* Red-400 */
+  --color-warning: 251 146 60; /* Orange-400 */
+  --color-success: 74 222 128; /* Green-400 */
+}
+
+/* Typography Scale - 4pt system */
+h1 {
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+  line-height: 2.5rem; /* 40px */
+  letter-spacing: -0.02em;
+  color: rgb(var(--color-text-primary));
+}
+
+h2 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+  line-height: 2rem; /* 32px */
+  letter-spacing: -0.01em;
+  color: rgb(var(--color-text-primary));
+}
+
+h3 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  line-height: 1.75rem; /* 28px */
+  color: rgb(var(--color-text-primary));
+}
+
+body {
+  font-size: 1rem; /* 16px */
+  font-weight: 400;
+  line-height: 1.5rem; /* 24px */
+  color: rgb(var(--color-text-primary));
+  background-color: rgb(var(--color-background));
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.caption {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 400;
+  line-height: 1.25rem; /* 20px */
+  color: rgb(var(--color-text-secondary));
+}
+
+.small {
+  font-size: 0.75rem; /* 12px */
+  font-weight: 400;
+  line-height: 1rem; /* 16px */
+  color: rgb(var(--color-text-tertiary));
+}
+
+/* Reset margins */
+h1, h2, h3, p {
+  margin: 0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-surface));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-gray-300));
+  border-radius: var(--radius-full);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-gray-600));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-gray-400));
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-gray-500));
+}
